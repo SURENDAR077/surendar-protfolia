@@ -1,7 +1,7 @@
 var STORAGE_KEY = "sk_portfolio_main";
 
 var editableSelector =
-  "main h1, main h2, main h3, main p, main li, main .section-label, main .contact-label, main .contact-value, main .hero-tags span, main .project-tags span, main .project-icon";
+  "main h1, main h2, main h3, main p, main li, main .kicker, main .section-title, main .stat-num, main .stat-label, main .service-num, main .project-tags span, main .project-num, main .award-num, main .about-stat-num, main .cta-links a";
 
 function setEditable(on) {
   var nodes = document.querySelectorAll(editableSelector);
@@ -85,7 +85,7 @@ function initEditMode() {
     });
 
   document
-    .querySelector(".hero-photo")
+    .getElementById("hero-photo-wrap")
     .addEventListener("click", function () {
       if (body.classList.contains("edit-mode")) {
         document.getElementById("photo-input").click();
@@ -93,25 +93,50 @@ function initEditMode() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("year").textContent = new Date().getFullYear();
-  restorePage();
-  initEditMode();
+function initNav() {
+  var header = document.getElementById("header");
+  var toggle = document.getElementById("nav-toggle");
+  var nav = document.querySelector(".nav");
 
-  var toggle = document.querySelector(".nav-toggle");
-  var navLinks = document.querySelector(".nav-links");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 40) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
 
   toggle.addEventListener("click", function () {
-    var isOpen = navLinks.classList.toggle("open");
+    var isOpen = nav.classList.toggle("open");
     toggle.classList.toggle("open", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  navLinks.querySelectorAll("a").forEach(function (link) {
+  nav.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
-      navLinks.classList.remove("open");
+      nav.classList.remove("open");
       toggle.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
     });
   });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("year").textContent = new Date().getFullYear();
+  restorePage();
+  initEditMode();
+  initNav();
+
+  var preloader = document.getElementById("preloader");
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      preloader.classList.add("hidden");
+    }, 500);
+  });
+
+  setTimeout(function () {
+    if (!preloader.classList.contains("hidden")) {
+      preloader.classList.add("hidden");
+    }
+  }, 3500);
 });

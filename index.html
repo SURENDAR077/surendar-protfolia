@@ -3,223 +3,291 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Surendar K — Electronics and Communication Engineering undergraduate specializing in embedded systems and AI." />
-  <title>Surendar K | ECE & Embedded Systems</title>
+  <meta name="description" content="Portfolio of Surendar K — Electronics and Communication Engineering undergraduate specializing in embedded systems, microcontrollers, and AI." />
+  <title>Surendar K | Developer & Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#about">Skip to content</a>
+  <div class="preloader" id="preloader">
+    <span class="load-text">L o a d i n g</span>
+    <span class="load-name">Surendar</span>
+  </div>
 
-  <header class="nav">
-    <div class="nav-inner">
-      <a href="#main-content" class="brand">Surendar<span>.K</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav-links" aria-label="Primary">
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Surendar<span>.</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="edit-toggle" id="edit-toggle" aria-pressed="false">Edit</button>
+      <div class="header-actions">
+        <a class="btn-cv" href="resume.pdf" download>Download CV</a>
+        <button class="edit-toggle" id="edit-toggle" aria-pressed="false">Edit</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
     <!-- Hero -->
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-photo" aria-label="Photo of Surendar K">
-          <img id="profile-photo" src="profile.jpg" alt="Surendar K" onerror="this.style.display='none';document.getElementById('profile-fallback').style.display='grid';" />
-          <div id="profile-fallback" class="profile-fallback" style="display:none">SK</div>
-          <input type="file" id="photo-input" accept="image/*" hidden />
-        </div>
-        <div class="hero-text">
-          <p class="hero-eyebrow">Electronics & Communication Engineering Undergraduate</p>
-          <h1>Hi, I'm <span class="accent">Surendar K</span></h1>
-          <p class="hero-sub">
-            I build with embedded systems, microcontrollers, and AI — turning circuits and data into
-            real-world solutions. Certified LabVIEW Associate Developer (CLAD) with a passion for
-            applying technical knowledge to meaningful projects.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Get in touch</a>
-            <a class="btn btn-outline" href="#projects">View projects</a>
-            <a class="btn btn-outline btn-download" href="resume.pdf" download>Download resume</a>
+    <section id="home" class="hero">
+      <span class="hero-big" aria-hidden="true">DEVELOPER</span>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <p class="kicker">developer</p>
+            <h1 class="hero-title">Hello! I'm <span class="grad">Surendar K</span></h1>
+            <p class="hero-sub">
+              An Electronics &amp; Communication engineering undergraduate focused on
+              embedded systems, microcontrollers, and real-world AI.
+            </p>
+            <ul class="hero-list">
+              <li><span class="plus">+</span> Embedded Systems &amp; Microcontrollers</li>
+              <li><span class="plus">+</span> Arduino / PIC18F4550</li>
+              <li><span class="plus">+</span> AI &amp; Machine Learning</li>
+              <li><span class="plus">+</span> LabVIEW (Certified CLAD)</li>
+              <li><span class="plus">+</span> MATLAB &amp; Circuit Design</li>
+            </ul>
           </div>
-          <div class="hero-tags">
-            <span>Embedded Systems</span>
-            <span>Microcontrollers</span>
-            <span>AI & ML</span>
-            <span>LabVIEW (CLAD)</span>
+          <div class="hero-right">
+            <div class="hero-photo-wrap" id="hero-photo-wrap">
+              <img id="profile-photo" src="profile.jpg" alt="Surendar K" onerror="this.style.display='none';document.getElementById('profile-fallback').style.display='grid';" />
+              <div id="profile-fallback" class="profile-fallback" style="display:none">SK</div>
+              <input type="file" id="photo-input" accept="image/*" hidden />
+            </div>
+            <div class="hero-photo-frame" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a class="btn-solid" href="#projects">view projects</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-num">2+</span>
+            <span class="stat-label">Projects &amp; Paper Presentations</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Skills &amp; Tools</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Commitment</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="section">
+    <section id="about" class="section dark">
       <div class="container">
-        <p class="section-label">About Me</p>
-        <h2 class="section-title">Dedicated. Curious. Engineering-Driven.</h2>
-        <p class="section-text">
-          I'm an Electronics and Communication Engineering undergraduate (2023–2027) with a strong
-          foundation in embedded systems, microcontroller programming, and digital electronics. I enjoy
-          hands-on hardware experimentation and applying my technical knowledge to real-world AI and
-          embedded projects — from training machine learning models to integrating MATLAB simulations
-          with PIC microcontroller hardware.
-        </p>
-        <div class="about-highlights">
-          <div class="highlight">
-            <h3>What I Do</h3>
-            <p>Embedded system design, microcontroller programming (Arduino / PIC18F4550), circuit design, and AI application development.</p>
+        <p class="kicker">about us</p>
+        <h2 class="section-title">Designing, building &amp; learning — one circuit at a time.</h2>
+        <div class="about-grid">
+          <div class="about-photo">
+            <img src="profile2.jpg" alt="Surendar K" />
           </div>
-          <div class="highlight">
-            <h3>What I'm Exploring</h3>
-            <p>AI in embedded systems, natural language processing, and expanding my networking and systems knowledge.</p>
-          </div>
-          <div class="highlight">
-            <h3>How I Work</h3>
-            <p>Analytical, self-motivated, and collaborative — with strong teamwork, communication, and problem-solving habits.</p>
+          <div class="about-content">
+            <p>
+              I'm a passionate Electronics and Communication Engineering undergraduate
+              (2023–2027) building modern, user-focused embedded and AI solutions. I blend
+              hands-on hardware experimentation with clean technical reasoning to create
+              systems that are not only functional but meaningful.
+            </p>
+            <p>
+              With a strong foundation in microcontroller programming, digital electronics,
+              and MATLAB simulation, I transform complex ideas into working prototypes.
+              From training machine learning models to integrating MATLAB with PIC
+              microcontroller hardware, I love bringing ideas from concept to reality.
+            </p>
+            <div class="about-stat">
+              <span class="about-stat-num">2+</span>
+              <span class="about-stat-text">Years of hands-on<br />engineering learning</span>
+            </div>
+            <a class="btn-line" href="resume.pdf" download>Download CV</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section section-alt">
+    <!-- Services / What I do -->
+    <section id="services" class="section dark">
       <div class="container">
-        <p class="section-label">Skills</p>
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h3>Programming & Tools</h3>
+        <p class="kicker">what i do</p>
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-num">01</span>
+            <h3>Embedded Systems</h3>
             <ul>
-              <li>Embedded Systems & Microcontrollers</li>
+              <li>Microcontroller Programming</li>
               <li>Arduino / PIC18F4550</li>
-              <li>C / C++ (Basic)</li>
-              <li>Python Programming</li>
-              <li>Java Programming</li>
-              <li>MATLAB (Beginner–Intermediate)</li>
-              <li>LabVIEW (Certified CLAD)</li>
-              <li>Digital Electronics & Circuit Design</li>
-              <li>AI Basics & Tech Research</li>
+              <li>Hardware Prototyping</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-num">02</span>
+            <h3>AI &amp; Machine Learning</h3>
+            <ul>
+              <li>NLP &amp; Text Classification</li>
+              <li>Model Training &amp; Evaluation</li>
+              <li>Data Preprocessing</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-num">03</span>
+            <h3>Simulation &amp; Design</h3>
+            <ul>
+              <li>MATLAB Simulations</li>
+              <li>LabVIEW Development</li>
+              <li>Digital Circuit Design</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-num">04</span>
+            <h3>Programming</h3>
+            <ul>
+              <li>Python &amp; Java</li>
+              <li>C / C++</li>
               <li>Basic Web Design</li>
             </ul>
-          </div>
-          <div class="skill-card">
-            <h3>Professional Skills</h3>
-            <ul>
-              <li>Teamwork & Leadership</li>
-              <li>Time Management</li>
-              <li>Effective Communication</li>
-              <li>Critical & Analytical Thinking</li>
-              <li>Presentation & Communication</li>
-              <li>Self-Learning & Adaptability</li>
-              <li>Problem-Solving</li>
-            </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="section">
+    <section id="projects" class="section dark">
       <div class="container">
-        <p class="section-label">Projects</p>
-        <h2 class="section-title">Projects & Paper Presentations</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-icon">AI</div>
-            <h3>AI-Powered Fake News Detector</h3>
-            <p>
-              Built an AI application to classify and detect fake news articles using NLP techniques.
-              Trained machine learning models to analyze textual content and predict news authenticity,
-              with full text-preprocessing, feature-extraction, and evaluation pipelines.
-            </p>
-            <div class="project-tags">
-              <span>Python</span><span>NLP</span><span>Machine Learning</span>
+        <p class="kicker">works</p>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-list">
+          <article class="project-row">
+            <div class="project-thumb thumb-ai">
+              <span>AI</span>
             </div>
+            <div class="project-info">
+              <div class="project-tags"><span>NLP</span><span>Machine Learning</span><span>Python</span></div>
+              <h3>AI-Powered Fake News Detector</h3>
+              <p>
+                An AI application that classifies and detects fake news using natural
+                language processing, with text preprocessing, feature extraction, and
+                model evaluation pipelines.
+              </p>
+            </div>
+            <span class="project-num">01</span>
           </article>
-          <article class="project-card">
-            <div class="project-icon">EM</div>
-            <h3>Embedded System Experiments with MATLAB & PIC</h3>
-            <p>
-              Hands-on embedded experiments integrating MATLAB simulations with PIC microcontroller
-              hardware. Specialized in summarizing and presenting technical research papers on
-              electronics and communication topics.
-            </p>
-            <div class="project-tags">
-              <span>MATLAB</span><span>PIC18F4550</span><span>Embedded</span>
+          <article class="project-row">
+            <div class="project-thumb thumb-embed">
+              <span>EM</span>
             </div>
+            <div class="project-info">
+              <div class="project-tags"><span>MATLAB</span><span>PIC18F4550</span><span>Embedded</span></div>
+              <h3>Embedded Experiments with MATLAB &amp; PIC</h3>
+              <p>
+                Hands-on embedded experiments integrating MATLAB simulations with PIC
+                microcontroller hardware, plus technical research paper presentations on
+                electronics and communication topics.
+              </p>
+            </div>
+            <span class="project-num">02</span>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Education & Certifications -->
-    <section id="education" class="section section-alt">
+    <!-- Certifications -->
+    <section id="education" class="section dark">
       <div class="container">
-        <p class="section-label">Education & Certifications</p>
-        <h2 class="section-title">Education</h2>
-        <div class="education-block">
-          <div class="education-line"></div>
-          <div class="education-item">
-            <h3>Bachelor of Engineering — Electronics & Communication Engineering</h3>
-            <p class="muted">Mahendra Engineering College, Namakkal &nbsp;|&nbsp; 2023 – 2027</p>
+        <p class="kicker">credentials</p>
+        <h2 class="section-title">Education &amp; Awards</h2>
+        <div class="awards">
+          <div class="award-row">
+            <span class="award-num">01</span>
+            <div class="award-info">
+              <h3>Bachelor of Engineering — ECE</h3>
+              <p>Mahendra Engineering College, Namakkal | 2023 – 2027</p>
+            </div>
+          </div>
+          <div class="award-row">
+            <span class="award-num">02</span>
+            <div class="award-info">
+              <h3>LabVIEW Certified Associate Developer (CLAD)</h3>
+              <p>National Instruments</p>
+            </div>
+          </div>
+          <div class="award-row">
+            <span class="award-num">03</span>
+            <div class="award-info">
+              <h3>MATLAB — Beginner to Intermediate</h3>
+              <p>Embedded Applications Focus</p>
+            </div>
+          </div>
+          <div class="award-row">
+            <span class="award-num">04</span>
+            <div class="award-info">
+              <h3>Network Specialist Certificate Program</h3>
+              <p>In Progress</p>
+            </div>
+          </div>
+          <div class="award-row">
+            <span class="award-num">05</span>
+            <div class="award-info">
+              <h3>Paper Presentations — Inter-College</h3>
+              <p>AI-Powered Fake News Detector</p>
+            </div>
           </div>
         </div>
-
-        <h2 class="section-title sub">Certifications</h2>
-        <ul class="cert-list">
-          <li><span class="cert-dot"></span> LabVIEW Certified Associate Developer (CLAD) — National Instruments</li>
-          <li><span class="cert-dot"></span> Network Specialist Certificate Program (In Progress)</li>
-          <li><span class="cert-dot"></span> MATLAB — Beginner to Intermediate (Embedded Applications Focus)</li>
-        </ul>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container contact">
-        <p class="section-label">Contact</p>
-        <h2 class="section-title">Let's Build Something Together</h2>
-        <p class="section-text">
-          Have an idea, a research collaboration, or an opportunity? I'd love to hear from you.
-        </p>
-        <div class="contact-cards">
-          <a class="contact-card" href="mailto:surendarkcr07@gmail.com">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">surendarkcr07@gmail.com</span>
-          </a>
-          <a class="contact-card" href="tel:+919344186746">
-            <span class="contact-label">Phone</span>
-            <span class="contact-value">+91 93441 86746</span>
-          </a>
-          <a class="contact-card" href="https://linkedin.com/in/surendar-k-0bbb7636b" target="_blank" rel="noopener">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">/in/surendar-k-0bbb7636b</span>
-          </a>
-          <div class="contact-card">
-            <span class="contact-label">Location</span>
-            <span class="contact-value">Sankrapuram, Kallakurichi, Tamil Nadu</span>
-          </div>
+    <section id="contact" class="section cta">
+      <div class="container">
+        <p class="kicker">contact</p>
+        <h2 class="cta-title">Let's create something meaningful</h2>
+        <div class="cta-links">
+          <a href="mailto:surendarkcr07@gmail.com">surendarkcr07@gmail.com</a>
+          <span>/</span>
+          <a href="tel:+919344186746">+91 93441 86746</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Surendar K. Built with HTML, CSS & JavaScript.</p>
+    <div class="container footer-inner">
+      <a class="logo" href="#home">Surendar<span>.</span></a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#home">Home,</a>
+        <a href="#about">About,</a>
+        <a href="#projects">Projects,</a>
+        <a href="#services">Services,</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="footer-linkedin" href="https://linkedin.com/in/surendar-k-0bbb7636b" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Surendar K. All rights reserved.</p>
   </footer>
 
   <div class="edit-bar" id="edit-bar" hidden>
-    <span>Edit mode: click any text to change it, click the photo to replace it.</span>
+    <span>Edit mode: click any text to change it, click the hero photo to replace it.</span>
     <div>
       <button class="btn-edit" id="edit-reset" type="button">Reset edits</button>
       <button class="btn-edit" id="edit-done" type="button">Done</button>

@@ -598,6 +598,10 @@ img {
   background: linear-gradient(135deg, var(--lime), #9ee200);
 }
 
+.thumb-web {
+  background: linear-gradient(135deg, #00d4ff, #7b2ff7);
+}
+
 .thumb-embed {
   background: linear-gradient(135deg, var(--orange), #ff8c3b);
 }

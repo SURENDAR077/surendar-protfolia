@@ -642,6 +642,36 @@ img {
   -webkit-text-stroke: 1px var(--muted);
 }
 
+.project-link {
+  cursor: pointer;
+}
+
+.project-title-link {
+  transition: color 0.2s;
+}
+
+.project-link:hover .project-title-link {
+  color: var(--lime);
+}
+
+.project-visit {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--heading-font);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.project-visit:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
 /* Awards */
 .awards {
   display: grid;

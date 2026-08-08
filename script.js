@@ -1,4 +1,5 @@
-var STORAGE_KEY = "sk_portfolio_main";
+var STORAGE_KEY = "sk_portfolio_v2";
+var ADMIN_PASSCODE = "sk2026";
 
 var editableSelector =
   "main h1, main h2, main h3, main p, main li, main .kicker, main .section-title, main .stat-num, main .stat-label, main .service-num, main .project-tags span, main .project-num, main .award-num, main .about-stat-num, main .cta-links a";
@@ -41,6 +42,11 @@ function initEditMode() {
       bar.hidden = true;
       body.classList.remove("edit-mode");
     } else {
+      var code = prompt("Enter the edit passcode:");
+      if (code !== ADMIN_PASSCODE) {
+        alert("Incorrect passcode. Edit mode is private.");
+        return;
+      }
       setEditable(true);
       toggle.classList.add("active");
       toggle.setAttribute("aria-pressed", "true");
@@ -97,6 +103,16 @@ function initNav() {
   var header = document.getElementById("header");
   var toggle = document.getElementById("nav-toggle");
   var nav = document.querySelector(".nav");
+
+  var links = document.querySelectorAll(".project-link");
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function (e) {
+      if (e.target.closest("a")) return;
+      if (document.body.classList.contains("edit-mode")) return;
+      var url = this.getAttribute("data-url");
+      if (url) window.open(url, "_blank", "noopener");
+    });
+  }
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 40) {

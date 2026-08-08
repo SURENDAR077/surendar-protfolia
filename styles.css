@@ -672,6 +672,18 @@ img {
   border-color: var(--orange);
 }
 
+.project-url {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+.project-link:hover .project-url {
+  color: var(--lime);
+}
+
 /* Awards */
 .awards {
   display: grid;
